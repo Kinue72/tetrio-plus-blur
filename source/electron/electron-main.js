@@ -133,23 +133,6 @@ async function createTetrioPlusWindow() {
   });
   let mainWin = await mainWindow;
 
-  if (storeGet('transparentBgEnabled') && getBlurConfig("enable") === "true") {
-    switch (process.platform) {
-      case "linux":
-        mainWin.blurGnomeSigma = parseInt(getBlurConfig("gnome-sigma"));
-        mainWin.blurCornerRadius = parseInt(getBlurConfig("blur-corner-radius"));
-        await mainWin.setBlur(true);
-        break
-      case "darwin":
-        mainWin.setVibrancy(getBlurConfig("mac-vibrancy"));
-        break
-      default:
-        mainWin.blurType = getBlurConfig("win-blur");
-        await mainWin.setBlur(true);
-        break
-    }
-  }
-
 
   mainWin.on('closed', () => {
     greenlog("Main window closed");
@@ -461,6 +444,24 @@ app.whenReady().then(async () => {
     mainContents.on('dom-ready', async evt => {
       mainContents.openDevTools();
     });
+  }
+  
+  if (storeGet('transparentBgEnabled') && getBlurConfig("enable") === "true") {
+      let mainWin = await mainWindow;
+      switch (process.platform) {
+          case "linux":
+              mainWin.blurGnomeSigma = parseInt(getBlurConfig("gnome-sigma"));
+              mainWin.blurCornerRadius = parseInt(getBlurConfig("blur-corner-radius"));
+              await mainWin.setBlur(true);
+              break
+          case "darwin":
+              mainWin.setVibrancy(getBlurConfig("mac-vibrancy"));
+              break
+          default:
+              mainWin.blurType = getBlurConfig("win-blur");
+              await mainWin.setBlur(true);
+              break
+      }
   }
 
   if (!storeGet('hideTetrioPlusOnStartup')) {
