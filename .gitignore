@@ -1,0 +1,9 @@
+.tmp.drivedownload
+tetrioplus.zip
+tetrioplus.zip.xpi
+tetrioplus.xpi
+node_modules
+build
+buildscripttest
+importer/node_modules
+testcontent

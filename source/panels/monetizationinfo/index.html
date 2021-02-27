@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TETR.IO PLUS - Support the game</title>
+    <style>
+      body {
+          font-size: 16pt;
+          margin: 0px 20px;
+          text-align: justify;
+          font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      TETR.IO isn't free to run, and blocking ads means osk doesn't recieve any
+      revenue. The game includes an option to turn off ads natively, but still
+      loads the ad script. Using TETR.IO PLUS's ad blocker will block this
+      script, preventing it from tracking you.
+
+      If you block ads, take a moment to consider purchasing TETR.IO Supporter
+      through the in-game menu. If you're already a supporter, great! You should
+      use this anyway because invasive ad scripts.
+      
+      Consider also reading osk's
+      <a id='blogpost' href="#">blog post</a>
+      about the addition of ads into the game.
+    </p>
+
+    <script>
+      function open(url) {
+        if (browser.electron) {
+          browser.tabs.openExternal(url);
+        } else {
+          window.open(url);
+        }
+      }
+      document.getElementById('blogpost').onclick = function() {
+        open('https://blog.osk.sh/post.php?p=5f9dfef7f36858.79227265')
+      }
+    </script>
+
+    <p>
+      Note: These are links for supporting osk and TETR.IO directly. They
+      <em>do not</em> support the author of TETR.IO PLUS. TETR.IO PLUS will
+      remain freely available without ads.
+    </p>
+  </body>
+</html>

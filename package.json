@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "name": "tetrioplus",
+  "author": "UniQMG",
+  "description": "Tetrio Plus",
+  "main": "makeTPSELib.js",
+  "version": "0.16.15",
+  "dependencies": {
+    "audio-decode": "^1.4.0",
+    "av": "^0.4.9",
+    "canvas": "^2.6.1",
+    "commander": "^6.2.0",
+    "esm": "^3.2.25",
+    "mime-types": "^2.1.27",
+    "node-fetch": "^2.6.1",
+    "ogg.js": "^0.1.0",
+    "stream-buffers": "^3.0.2",
+    "vblob": "^1.0.2",
+    "vorbis.js": "^0.1.1",
+    "vue-template-compiler": "^2.6.12",
+    "web-audio-engine": "^0.13.4",
+    "whatwg-url": "^8.1.0",
+    "xmldom": "^0.3.0"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.2.0",
+    "acorn": "^8.0.1",
+    "ast-types": "^0.14.2",
+    "recast": "^0.20.3"
+  }
+}
