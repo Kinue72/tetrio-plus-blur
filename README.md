@@ -13,7 +13,7 @@ extensively tested, and it's not packaged into a proper extension.**
 bugs, remove the extension and try again *before* reporting it**
 * Chromium-based browsers are not supported as [they lack](https://bugs.chromium.org/p/chromium/issues/detail?id=487422) an [important API](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData) used by this project.
 * This is fork with blur background ![image](https://zoo.hololive.wtf/i/kle9bw26.png)
-* I am so lazy to create a gitlab account
+* I am too lazy to create a gitlab account
 
 ## Electron packaging instructions
 These are instructions for *packaging electron releases*.
